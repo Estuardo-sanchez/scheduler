@@ -3,6 +3,7 @@ import DayList from "./DayList";
 import "components/Application.scss";
 import Appointment from "./Appointment";
 import axios from "axios";
+import { getAppointmentsForDay } from "helpers/selectors";
 
 const appointments = {
   "1": {
@@ -44,8 +45,12 @@ const appointments = {
 };
 
 export default function Application(props) {
-  const [days, setDays] = useState([]);
-  const [day, setDay] = useState('Monday')
+  const setDay = day => setState({ ...state, day });
+  const setDays = (days) => setState(prev => ({ ...prev, days }));
+  const [state, setState] = useState({
+    day: "Monday",
+    days: []
+  });
   const appointmentsArr = Object.values(appointments).map((values) => {
     return values;
   })
@@ -68,8 +73,8 @@ export default function Application(props) {
         <hr className="sidebar__separator sidebar--centered" />
         <nav className="sidebar__menu">
           <DayList
-            days={days}
-            value={day}
+            days={state.days}
+            value={state.day}
             onChange={setDay}
           />
         </nav>
