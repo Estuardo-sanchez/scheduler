@@ -8,7 +8,7 @@ export function getAppointmentsForDay(state, day) {
     }
   })
   return apptArr;
-}
+};
 
 export function getInterview(state, interview) {
   if (!interview) {
@@ -19,4 +19,16 @@ export function getInterview(state, interview) {
     student: interview.student,
     interviewer: interviewData
   }
-}
+};
+
+export function getInterviewersForDay(state, day) {
+  const { days, interviewers } = state;
+  const interviewerArr = [];
+
+  days.map((dayObj) => {
+    if (dayObj.name === day) {
+      dayObj.interviewers.forEach((interId) => interviewerArr.push(interviewers[interId]));
+    }
+  })
+  return interviewerArr;
+};
