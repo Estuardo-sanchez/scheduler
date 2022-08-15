@@ -4,7 +4,7 @@ Interview Scheduler is a single-page application that allows users to book techn
 The front end was built with React and makes requests to the [scheduler-api](https://github.com/lighthouse-labs/scheduler-api) server to fetch and store appointment data.
 
 ## Final look
-!["creating appointment"](https://github.com/Estuardo-sanchez/scheduler/blob/master/docs/schedular%20add%20app%20.mov)
+
 
 ## Setup
   - Fork and clone this repo.
