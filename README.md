@@ -5,6 +5,11 @@ The front end was built with React and makes requests to the [scheduler-api](htt
 
 ## Final look
 
+## Create appointment
+![interview-schedular add app ](https://user-images.githubusercontent.com/93778202/184580780-7ca7c31c-b2b1-4707-81e7-c356e4ed524e.gif)
+
+## Edit/Delete appointment
+![interview-scheduler delete app](https://user-images.githubusercontent.com/93778202/184580834-8e8c1f9a-f8b2-43f0-a6f2-97d233516803.gif)
 
 ## Setup
   - Fork and clone this repo.
