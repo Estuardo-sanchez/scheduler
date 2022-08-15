@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import DayListItem from "./DayListItem";
 
 export default function DayList(props) {
   const schedule = props.days.map(day => {
 
     return (
-      <DayListItem 
+      <DayListItem
         key={day.id}
         selected={day.name === props.value}
         setDay={props.onChange}
@@ -18,4 +18,4 @@ export default function DayList(props) {
       {schedule}
     </ul>
   );
-}
+};

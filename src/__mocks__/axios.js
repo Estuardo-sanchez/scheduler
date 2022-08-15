@@ -1,3 +1,4 @@
+// FIXTURES
 const fixtures = {
   days: [
     {
@@ -53,6 +54,7 @@ const fixtures = {
   }
 };
 
+// MOCK REQUESTS
 export default {
   defaults: { baseURL: "" },
   get: jest.fn(url => {
@@ -65,7 +67,6 @@ export default {
     }
 
     if (url === "http://localhost:8001/api/appointments") {
-      /* Resolve appointments data */
       return Promise.resolve({
         status: 200,
         statusText: "OK",
@@ -74,7 +75,6 @@ export default {
     }
 
     if (url === "http://localhost:8001/api/interviewers") {
-      /* Resolve interviewers data */
       return Promise.resolve({
         status: 200,
         statusText: "OK",
@@ -83,6 +83,7 @@ export default {
     }
   }),
 
+  // PUT REQUEST TO ADD OR UPDATE APPOINTMENT
   put: jest.fn((url) => {
     return Promise.resolve({
       status: 204,
@@ -90,6 +91,7 @@ export default {
     });
   }),
 
+  // DELETE REQUEST TO DELETE APPOINTMENT
   delete: jest.fn((url) => {
     return Promise.resolve({
       status: 204,

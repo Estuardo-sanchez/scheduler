@@ -41,23 +41,23 @@ export default function Application(props) {
         />
       </section>
       <section className="schedule">
-      {dailyAppointments.map((appointment)=>{
-        const interview = getInterview(state, appointment.interview);
+        {dailyAppointments.map((appointment) => {
+          const interview = getInterview(state, appointment.interview);
 
-        return (
-          <Appointment
-          key={appointment.id}
-          id={appointment.id}
-          time={appointment.time}
-          interview={interview}
-          interviewers={dailyInterviews}
-          bookInterview={bookInterview}
-          cancelInterview={cancelInterview}
-        />
-        )
-         })}
-         <Appointment key="last" time="5pm" />
+          return (
+            <Appointment
+              key={appointment.id}
+              id={appointment.id}
+              time={appointment.time}
+              interview={interview}
+              interviewers={dailyInterviews}
+              bookInterview={bookInterview}
+              cancelInterview={cancelInterview}
+            />
+          )
+        })}
+        <Appointment key="last" time="5pm" />
       </section>
     </main>
   );
-}
+};
