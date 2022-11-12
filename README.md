@@ -34,3 +34,4 @@ npm run storybook
   - react
   - react-dom
   - react-scripts
+  - normalize.css
